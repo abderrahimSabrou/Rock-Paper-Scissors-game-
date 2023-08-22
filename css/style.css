@@ -1,0 +1,194 @@
+:root {
+  --black-clr: #00303b;
+  --light-red-clr: #ff7777;
+  --yellow-clr: #ffce96;
+  --white-clr: #f1f2da;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: url("../images/cursor.png"), auto;
+}
+
+@font-face {
+  font-family: "Gameria Font";
+  src: url(../fonts/gameria/GAMERIA.ttf);
+}
+
+body {
+  font-family: "Gameria Font", Arial, sans-serif;
+  background-color: var(--yellow-clr);
+  position: relative;
+}
+
+.welcome-container {
+  /* position: absolute; */
+  border-radius: 20px;
+  margin: 100px auto 0;
+  /* top: 100px;
+  left: 14%; */
+  background-color: var(--black-clr);
+  width: 900px;
+  height: 500px;
+}
+
+.welcome-container h1 {
+  text-align: center;
+  color: var(--white-clr);
+  font-size: 5rem;
+  padding: 20px;
+  text-decoration: underline;
+  /* word-spacing: 10px; */
+}
+
+.welcome__text {
+  color: var(--white-clr);
+  text-align: center;
+  font-size: 2.5rem;
+  width: 90%;
+  margin: 20px auto 0px;
+}
+
+.welcome-container button.next-btn {
+  padding: 20px 20px;
+  border: none;
+  font-size: 2rem;
+  background: var(--yellow-clr);
+  color: var(--black-clr);
+  font-family: inherit;
+  display: block;
+  margin: 30px auto 0px;
+  clip-path: polygon(0 10%, 100% 0, 95% 93%, 6% 88%);
+  cursor: url("../images/cursor.png"), auto;
+  transition: 0.1s ease-in-out;
+}
+
+.welcome-container button.next-btn:hover {
+  clip-path: polygon(0 4%, 100% 10%, 100% 90%, 6% 94%);
+  transform: scale(0.9);
+}
+
+.welcome-container button.next-btn:active {
+  transform: scale(0.8);
+}
+
+/* Start the Game */
+.game-container {
+  /* border-radius: 20px; */
+  /* margin: 100px auto 0; */
+  /* top: 100px;
+  left: 14%; */
+  background-color: var(--black-clr);
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 1s ease-in-out 1s;
+  /* border: 1px solid red; */
+  cursor: url("../images/cursor.png"), auto;
+}
+
+.game__title {
+  color: var(--white-clr);
+  text-align: center;
+  font-size: 5rem;
+  padding: 20px;
+  text-decoration: underline;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+.game {
+  /* border: 1px solid red; */
+  width: 1200px;
+  height: 440px;
+  margin: 20px auto 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.vs {
+  position: absolute;
+  top: 45%;
+  left: 47%;
+  font-size: 3rem;
+  color: var(--light-red-clr);
+}
+
+.game > div {
+  /* border: 1px solid red; */
+  width: 38%;
+  height: 100%;
+  border-radius: 20px;
+  background: url(../images/Lined_paper.png);
+  background-position: left;
+  background-size: cover;
+}
+
+.game > div h2 {
+  color: var(--black-clr);
+  text-decoration: underline;
+  text-align: center;
+  padding: 20px;
+  font-size: 2.3rem;
+}
+
+#player-choice-container {
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  /* border: 1px solid red; */
+  height: 230px;
+}
+
+.choice-container {
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  /* border: 1px solid red; */
+  height: 230px;
+}
+
+.emoji {
+  font-size: 6rem;
+  margin-top: 50px;
+}
+
+#game-result-message {
+  padding: 20px 20px;
+  margin: auto;
+  width: 650px;
+  text-align: center;
+  border: none;
+  font-size: 2rem;
+  background: var(--yellow-clr);
+  color: var(--black-clr);
+  font-family: inherit;
+  display: block;
+  margin: 30px auto 0px;
+  clip-path: polygon(0 10%, 100% 0, 95% 93%, 6% 88%);
+  cursor: url("../images/cursor.png"), auto;
+  transition: 0.1s ease-in-out;
+}
+
+/* button.play:hover {
+  clip-path: polygon(0 4%, 100% 10%, 100% 90%, 6% 94%);
+  transform: scale(0.9);
+}
+
+button.play:active {
+  transform: scale(0.8); 
+}
+
+
+
+/* To hide elements */
+
+.hide {
+  display: none;
+}
